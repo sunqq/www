@@ -11,51 +11,20 @@
 <body>
 
 	<script type="text/javascript">
-
-
-	var sensors = window['sensorsDataAnalytic201505'];
-	// var sa = window['sensorsDataAnalytic201505'];
-
-	
-
-	sensors.init({
-		
-		server_url: 'https://sdk-product-datasink.sensorsdata.cn/sa?project=sunqiangqiang',
-		app_js_bridge: true,
-		show_log: true,
-		use_client_time: false
-	
-	});
-
-	sensors.quick('autoTrack');
-
+		var sensors = window['sensorsDataAnalytic201505'];
+		sensors.init({
+			server_url: 'https://sdk-product-datasink.sensorsdata.cn/sa?project=sunqiangqiang',
+			app_js_bridge: true,
+			show_log: true,
+			use_client_time: false
+		});
+		sensors.quick('autoTrack');
 	</script>
 
-
-
-
-	<!-- <div data-sensors-exposure-event-name="test_exposure" data-sensors-exposure-property-propA="valueA" >测试 html1222</div> -->
 	<button onclick='callArkTS()'>CallHarmonyFunc</button>
 	
 	<button onclick='writeCookie()' sensors-disable=true >写 Cookie</button>
 	<p id="demo"></p>
-
-	<div>
-
-		<ul>
-			<li>
-				<div>小微易贷</div>
-				<ul>
-					<div>
-						<li>授权申请</li>
-					</div>
-				</ul>
-			</li>
-			<li>a2</li>
-			<li>a3</li>
-			<li>a4</li>
-		</ul>
-	</div>
 
 	<script type="text/javascript">
 
@@ -65,38 +34,10 @@
         	// document.getElementById("demo").innerHTML = str;
         	// console.info('ArkTS Hello World! :' + str);
 
-			var sensors = window['sensorsDataAnalytic201505'];
-	var sa = window['sensorsDataAnalytic201505'];
-
-	
-
-	sensors.init({
-		
-		server_url: 'https://sdk-product-datasink.sensorsdata.cn/sa?project=sunqiangqiang',
-		app_js_bridge: true,
-		show_log: true,
-		use_client_time: false
-	
-	});
-
-	sensors.quick('autoTrack');
-
-
-
         	sensors.track('BuyProduct');
 			sa.track('BuyProduct2');
 			
     	}
-
-    	function writeCookie() {
-    		var date = new Date();
-    		console.log(date.getTime());
-    		var expiress = new Date(date.getTime() + 1000*1000).toGMTString();
-    		console.log(expiress);
-    		document.cookie = 'username=frank;expiress='+expiress;
-    	}
-
-
 	</script>
 </body>
 </html>
