@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD-like Webpage Demo</title>
+    <title>神策商城</title>
+	<script charset='UTF-8' src="./webjssdk/sensorsdata.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -102,6 +103,16 @@
     </style>
 </head>
 <body>
+	<script type="text/javascript">
+		var sensors = window['sensorsDataAnalytic201505'];
+		sensors.init({
+			server_url: 'https://sdk-product-datasink.sensorsdata.cn/sa?project=sunqiangqiang',
+			app_js_bridge: true,
+			show_log: true,
+			use_client_time: false
+		});
+		sensors.quick('autoTrack');
+	</script>
     <header>
         <h1>神策商城</h1>
         <div class="search-bar">
@@ -116,6 +127,12 @@
         <a href="#">关于我们</a>
     </nav>
     <main>
+		<div class="product">
+            <button>登录login</button><br />
+			<button>自定义事件track</button><br />
+			<button>设置用户属性profileset</button><br />
+			<button>重置匿名 ID</button><br />
+        </div>
         <div class="product">
             <img src="https://ow-file.sensorsdata.cn/ee/202312191156064637f00b8ac-737e-4b4c-8a08-f246c5238536.jpg" alt="Product Image">
             <h3>Product 1</h3>
@@ -140,12 +157,7 @@
             <p>$40.00</p>
             <button>加入购物车</button>
         </div>
-		<div class="product">
-            <button>登录login</button><br />
-			<button>自定义事件track</button><br />
-			<button>设置用户属性profileset</button><br />
-			<button>重置匿名 ID</button><br />
-        </div>
+		
 		<div class="product">
             <img src="https://ow-file.sensorsdata.cn/ee/202312191156064637f00b8ac-737e-4b4c-8a08-f246c5238536.jpg" alt="Product Image">
             <h3>Product 6</h3>
