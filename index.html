@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration, Login, and News Demo</title>
+    <title>JD-like Webpage Demo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,68 +13,88 @@
             background-color: #f4f4f9;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #FF4A00;
             color: white;
-            padding: 1rem 0;
+            padding: 1rem;
             text-align: center;
+        }
+        header .search-bar {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        header .search-bar input {
+            width: 60%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        header .search-bar button {
+            padding: 0.5rem;
+            background-color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            color: #FF4A00;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #FF4A00;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
-            padding: 2rem;
-            text-align: center;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .form-container {
-            max-width: 400px;
-            margin: 0 auto;
+        .product {
             background: white;
-            padding: 2rem;
+            margin: 1rem;
+            padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
         }
-        .form-container h2 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .form-container input {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
+        .product img {
+            max-width: 100%;
+            height: auto;
             border-radius: 4px;
         }
-        .form-container button {
-            width: 100%;
-            padding: 0.8rem;
+        .product h3 {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .product p {
+            color: #555;
+        }
+        .product button {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background-color: #FF4A00;
             color: white;
-            background-color: #007BFF;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
-        .form-container button:hover {
-            background-color: #0056b3;
-        }
-        .news-container {
-            max-width: 600px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
-        .news-container h2 {
-            margin-bottom: 1rem;
-        }
-        .news-item {
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 1rem;
+        .product button:hover {
+            background-color: #E03E00;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -83,53 +103,50 @@
 </head>
 <body>
     <header>
-        <h1>Registration, Login, and News Demo</h1>
-    </header>
-    <main>
-        <div class="form-container" id="loginSection">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="button" onclick="loginUser()">Login</button>
-            </form>
+        <h1>JD-like Webpage Demo</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products">
+            <button>Search</button>
         </div>
-        <div class="news-container" id="newsSection">
-            <h2>News</h2>
-            <div class="news-item">
-                <h3>News Title 1</h3>
-                <p>This is the content of the first news item.</p>
-            </div>
-            <div class="news-item">
-                <h3>News Title 2</h3>
-                <p>This is the content of the second news item.</p>
-            </div>
-            <div class="news-item">
-                <h3>News Title 3</h3>
-                <p>This is the content of the third news item.</p>
-            </div>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Deals</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product Image">
+            <h3>Product 1</h3>
+            <p>$10.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product Image">
+            <h3>Product 2</h3>
+            <p>$20.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product Image">
+            <h3>Product 3</h3>
+            <p>$30.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product Image">
+            <h3>Product 4</h3>
+            <p>$40.00</p>
+            <button>Add to Cart</button>
         </div>
     </main>
     <footer>
-        &copy; 2024 Registration, Login, and News Demo. All rights reserved.
+        &copy; 2024 JD-like Demo. All rights reserved.
     </footer>
-
-    <script>
-        function loginUser() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (username === 'user' && password === 'password') {
-                alert('Login successful!');
-                document.getElementById('loginSection').style.display = 'none';
-                document.getElementById('newsSection').style.display = 'block';
-            } else {
-                alert('Invalid credentials. Please try again.');
-            }
-        }
-    </script>
 </body>
 </html>
+
 
 
 
