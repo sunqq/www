@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Registration and Login Demo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,6 +22,37 @@
             padding: 2rem;
             text-align: center;
         }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 0.8rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -31,32 +62,34 @@
             bottom: 0;
             width: 100%;
         }
-        .button {
-            display: inline-block;
-            margin: 1rem auto;
-            padding: 0.5rem 1rem;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 4px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Sample HTML Page</h1>
+        <h1>Registration and Login Demo</h1>
     </header>
     <main>
-        <p>This is a simple HTML webpage created as an example.</p>
-        <a href="#" class="button">Click Me!</a>
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <br>
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </main>
     <footer>
-        &copy; 2024 Sample Webpage. All rights reserved.
+        &copy; 2024 Registration and Login Demo. All rights reserved.
     </footer>
 </body>
 </html>
